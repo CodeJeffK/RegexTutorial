@@ -76,29 +76,45 @@ regular expression case-insensitive, so capitals and lower-case letters will not
 
 ### Grouping and Capturing
 
+Our email regex:
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
+Grouping constructs is performed by placing an expression within parenthesis. 
+`([a-z0-9_\.-]+)` is the first group that appears in our regex. This must be true before moving on to "match" the next part of the code. 
+`([\da-z\.-]+)` is the second group that appears in our regex. 
+`([a-z\.]{2,6})` is the third group that appears in our regex. 
+
+When matching, we have to make sure we are following the guidelines of the group before moving on to the next group. 
 
 ### Bracket Expressions
 
+Bracket expressions allow for evaluations of multiple characters in place or for a range of characters. Bracket expressions use the square brackets '[]' to signify the range of characters for potential matches. 
 
+From our email regex:
+`[a-z0-9_\.-]`
+
+For this code snippet, it can contain letters a-z, numbers 0-9, an underscore, hyphen, or period. The period is an escaped character, so it required the backslash in order to be able to be matched. 
 
 ### Greedy and Lazy Match
 
-
+In a regular expression, the "greediness" of a quantifier refers to how many characters it will try to match. A greedy quantifier will try to match as many characters as possible, while a lazy quantifier will try to match as few characters as possible.
 
 ### Boundaries
 
+Our email regex:
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
+The boundaries are denoted by the forward slashes '/'.
 
 ### Back-references
 
-
+Back-references refer to a previously captured group and can be used to match repeating patterns.
 
 ### Look-ahead and Look-behind
 
-
+Look-ahead and look-behind are zero-length assertions that match a position rather than a character. Look-ahead asserts that the characters following the current position match a given pattern, while look-behind asserts that the characters preceding the current position match a given pattern. If using a look-ahead or look-behind, then it has to match in a certain order. It is not being used in our email regex.
 
 ## Author
 
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Any Questions? Please reachout to me at jkasahara206@gmail.com
+In addition, you can view this project and others on my [GitHub](https://github.com/CodeJeffK)
